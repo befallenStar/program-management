@@ -1,0 +1,34 @@
+@startuml
+start
+:用户点击注册按钮;
+:输入注册信息;
+while(所有必须的信息是否填写完毕) is (否)
+	if(继续注册) then(是)
+    :提示补全信息;
+	:用户补全信息;
+	else(否)
+	stop
+	endif
+endwhile(是)
+while(信息填写是否符合规范) is (否)
+	if(继续注册) then(是)
+	:提示修改信息;
+	:用户修改信息;
+	else(否)
+	stop
+	endif
+endwhile(是)
+:用户确认注册;
+if(确认注册) then(是)
+    :注册成功;
+	if(判断用户类型) then(学生)
+    :写入学生数据库;
+	else(教师)
+	:写入教师数据库;
+	endif
+	:显示主页;
+	stop
+else(否)
+stop
+endif
+@enduml

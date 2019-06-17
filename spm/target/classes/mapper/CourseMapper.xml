@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.njnu.dao.CourseMapper">
+
+    <resultMap id="myCourse" type="cn.edu.njnu.pojo.Course">
+        <id column="id" property="id"/>
+        <result column="telno" property="telno"/>
+        <result column="status" property="status"/>
+        <result column="email" property="email"/>
+        <result column="daily_grade" property="dailyGrade"/>
+        <result column="mid_grade" property="midGrade"/>
+        <result column="final_grade" property="finalGrade"/>
+        <result column="practice_grade" property="practiceGrade"/>
+        <result column="total_grade" property="totalGrade"/>
+        <association property="user" javaType="cn.edu.njnu.pojo.User">
+            <id column="student_id" property="id"/>
+            <result column="username" property="username"/>
+            <result column="password" property="password"/>
+            <result column="gender" property="gender"/>
+        </association>
+    </resultMap>
+
+    <!--Course queryCourseInfoByUserId(Integer userId);-->
+    <select id="queryCourseInfoByUserId" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where student_id = #{userId};
+    </select>
+
+    <!--Course queryCourseInfoByUsername(String username);-->
+    <select id="queryCourseInfoByUsername" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where username = #{username}
+    </select>
+
+    <!--Course queryCourseInfoById(Integer id);-->
+    <select id="queryCourseInfoById" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where course.id = #{id}
+    </select>
+
+    <!--List<Course> queryCourseInfoByFinalGrade(double finalGrade);-->
+    <select id="queryCourseInfoByFinalGrade" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where final_grade &lt; #{finalGrade}
+    </select>
+
+    <!--void insertCourse(Course course);-->
+    <insert id="insertCourse">
+        insert into course(student_id,email,telno,status) values(#{user.id},#{email},#{telno},#{status});
+    </insert>
+
+    <!--void updateDailyGrade(Course course);-->
+    <update id="updateDailyGrade">
+        update course set daily_grade = #{dailyGrade} where id = #{id}
+    </update>
+
+    <!--List<Course> queryAllByStatus(Integer status);-->
+    <select id="queryAllByStatus" resultMap="myCourse">
+        select * from course left outer join user on student_id = user.id where status = #{status}
+    </select>
+
+    <!--void updateStatusById(Integer id);-->
+    <update id="updateStatusById">
+        update course set status = 1 where id = #{id}
+    </update>
+
+    <!--void deleteCourseById(Integer id);-->
+    <delete id="deleteCourseById">
+        delete from course where id = #{id}
+    </delete>
+
+    <!--void updateGradeById(Course course);-->
+    <update id="updateGradeById">
+        update course set
+        daily_grade = #{dailyGrade},mid_grade = #{midGrade},final_grade = #{finalGrade},
+        practice_grade = #{practiceGrade},total_grade = #{totalGrade} where id = #{id}
+    </update>
+
+</mapper>

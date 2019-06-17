@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.njnu.dao.ResourceMapper">
+
+    <!--Integer insertFile(MyFile file);-->
+    <insert id="insertFile" keyProperty="id" parameterType="cn.edu.njnu.pojo.MyFile">
+        insert into file(filename,realname,path,time) values(#{filename},#{realname},#{path},#{time})
+    </insert>
+
+    <!--List<MyFile> queryAllFile();-->
+    <select id="queryAllFile" resultType="cn.edu.njnu.pojo.MyFile">
+        select * from file
+    </select>
+
+    <!--MyFile queryFileById(Integer id);-->
+    <select id="queryFileById" resultType="cn.edu.njnu.pojo.MyFile">
+        select * from file where id = #{id}
+    </select>
+
+    <!--void deleteFileById(Integer id);-->
+    <delete id="deleteFileById">
+        delete from file where id = #{id}
+    </delete>
+
+</mapper>

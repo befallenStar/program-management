@@ -1,0 +1,40 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>成绩查询</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/table.css"/>
+    <script src="${pageContext.request.contextPath}/js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<h1>成绩查询</h1>
+<table>
+    <tr>
+        <td>学号</td>
+        <td>${loginResult.username}</td>
+    </tr>
+    <tr>
+        <td>平时成绩</td>
+        <td>${loginResult.course.dailyGrade}</td>
+    </tr>
+    <tr>
+        <td>期中成绩</td>
+        <td>${loginResult.course.midGrade}</td>
+    </tr>
+    <tr>
+        <td>期末成绩</td>
+        <td>${loginResult.course.finalGrade}</td>
+    </tr>
+    <tr>
+        <td>实践成绩</td>
+        <td>${loginResult.course.practiceGrade}</td>
+    </tr>
+    <tr>
+        <td>总成绩</td>
+        <td>${loginResult.course.totalGrade}</td>
+    </tr>
+</table>
+<script src="${pageContext.request.contextPath}/js/table.js"></script>
+</body>
+</html>

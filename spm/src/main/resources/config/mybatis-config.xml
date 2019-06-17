@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--
+        settings包含很多重要的设置项，详见官方文件
+        setting:用来设置每一个设置项
+        name:设置项名
+        value:设置项取值
+    -->
+    <settings>
+        <!--mapUnderscoreToCamelCase 将下划线映射为驼峰命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+
+        <!--延迟查询,可以在使用到关联的属性时才查询相关数据-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <setting name="aggressiveLazyLoading" value="false"/>
+    </settings>
+    <!--
+        databaseIdProvider:支持多数据库厂商
+            type="DB_VENDOR",VendorDatabaseIdProvider
+                作用就是得到数据库厂商的标识(驱动getDatabaseProductName()),
+                mybatis就能根据数据库厂商标识来执行不同的sql
+    -->
+    <databaseIdProvider type="DB_VENDOR">
+        <!--为不同的数据库厂商标识起别名-->
+        <property name="MySQL" value="mysql"/>
+        <property name="Oracle" value="oracle"/>
+        <property name="SQL Server" value="sqlServer"/>
+    </databaseIdProvider>
+</configuration>

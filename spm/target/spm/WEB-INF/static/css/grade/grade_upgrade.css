@@ -1,0 +1,14 @@
+input[type="submit"]{
+    width: 80px;
+    height: 50px;
+    background: #673ab7;
+    color: #fff;
+    border: 0;
+}
+input[type="text"]{
+    width: 60%;
+    height:24px;
+    background: #ecf0f1;
+    border: solid 1px #bdc3c7;
+    border-radius: 8px;
+}

@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat", sans-serif;
+    font-size: 16px;
+}
+
+.teacher-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.teacher-profile {
+    position: absolute;
+    top: 0;
+    right: -150px;
+    width: 210px;
+    height: 30px;
+    transition-duration: 1s;
+}
+
+.teacher-profile:hover {
+    right: 0;
+}
+
+.teacher-message {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: greenyellow;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    display: table-cell;
+    vertical-align: center;
+    text-align: center;
+}
+
+.teacher-icon {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    background: greenyellow;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    display: table-cell;
+    vertical-align: center;
+    text-align: center;
+}
+
+.teacher-name {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 30px;
+}
+
+.teacher-class {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 90%;
+    height: 40px;
+}
+
+.teacher-class .pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 60px;
+}
+
+.teacher-class .name {
+    position: absolute;
+    top: 0;
+    left: 150px;
+    width: 100%;
+    height: 60px;
+}
+
+.teacher-menu {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    width: 150px;
+}
+
+.teacher-menu ul {
+    list-style: none;
+}
+
+.teacher-menu ul li {
+    background: #31354c;
+    top: 0;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    position: relative;
+    transition-duration: 1s;
+}
+
+.teacher-menu ul li a {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.teacher-menu ul li a:hover {
+    color: #31354c;
+    background: white;
+}
+
+.teacher-menu ul li ul {
+    top: 36px;
+    width: 150px;
+    left: 0;
+}
+
+.teacher-menu ul li ul li {
+    background: #9fbaa8;
+}
+
+.teacher-menu ul li ul li a {
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.teacher-menu ul li ul li a:hover {
+    color: #31354c;
+    background: white;
+}
+
+.sublast{
+    top:-108px;
+}
+#teacher-main {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+    width: 60%;
+    border: solid 1px black;
+}

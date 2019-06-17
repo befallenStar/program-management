@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+<<<<<<< HEAD
+Built-By: ThinkPad
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_181
+=======
+Built-By: Giovanni-Ch'ien
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8
+>>>>>>> 7a68c4967cfca7fcbd1f189730fe163faf1a889d
+

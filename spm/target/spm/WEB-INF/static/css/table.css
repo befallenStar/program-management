@@ -1,0 +1,43 @@
+table {
+    position: absolute;
+    top: 100px;
+    left:0;
+    width:98%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.tr_head {
+    background-color: #ccc;
+}
+
+.tr_even {
+    background-color: #ebf8ff;
+}
+
+.tr_odd {
+    background-color: #ddecf3;
+}
+
+.tr_hover {
+    background-color: #aaecf3;
+}
+
+th {
+    font-weight: bold;
+}
+
+table, th, tr, td {
+    border: solid 1px black;
+    padding: 10px;
+    text-align: center;
+    white-space: nowrap;
+}
+th,td{
+    height:50px;
+}
+
+th:first-child, td:first-child {
+    background-color: #ddd;
+    width:50px;
+}

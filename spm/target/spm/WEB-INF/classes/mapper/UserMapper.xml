@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.njnu.dao.UserMapper">
+
+    <!--User queryUserByUsernameAndPassword(User user);-->
+    <select id="queryUserByUsernameAndPassword" resultType="cn.edu.njnu.pojo.User">
+        select * from user where username = #{username} and password = #{password}
+    </select>
+
+    <!--User queryUserByUsername(String username);-->
+    <select id="queryUserByUsername" resultType="cn.edu.njnu.pojo.User">
+        select * from user where username = #{username}
+    </select>
+
+    <!--Integer insertUser(User user);-->
+    <insert id="insertUser">
+        insert into user(username,password,power) values(#{username},#{password},#{power})
+    </insert>
+
+</mapper>

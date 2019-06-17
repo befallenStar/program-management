@@ -1,0 +1,40 @@
+.class-pic {
+    position: absolute;
+    top: 8%;
+    left: 10%;
+    width: 24%;
+    height: 24%;
+}
+
+.class-profile {
+    position: absolute;
+    top: 8%;
+    left: 42%;
+    width: 42%;
+    height: 24%;
+}
+
+.class-btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 160px;
+    height:24%;
+    transform: translateX(-80px);
+    background: #673ab7;
+    color: #fff;
+    border: 0;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.class-message {
+    position: absolute;
+    top: 36%;
+    left:10%;
+    width: 78%;
+    height: 50%;
+}
+.icon i{
+    top:7px;
+}

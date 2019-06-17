@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.njnu.dao.MessageMapper">
+
+    <resultMap id="myMsg" type="cn.edu.njnu.pojo.Message">
+        <id column="id" property="id"/>
+        <result column="content" property="content"/>
+        <result column="time" property="time"/>
+        <association property="user" javaType="cn.edu.njnu.pojo.User">
+            <id column="user_id" property="id"/>
+            <result column="username" property="username"/>
+            <result column="gender" property="gender"/>
+        </association>
+    </resultMap>
+
+    <!--List<Message> queryAllMsgInfo();-->
+    <select id="queryAllMsgInfo" resultMap="myMsg">
+        select * from message left outer join user on user_id = user.id
+    </select>
+
+    <!--void insertMessage(Message message);-->
+    <insert id="insertMessage">
+        insert into message(user_id,content,time) values(#{user.id},#{content},#{time})
+    </insert>
+
+</mapper>

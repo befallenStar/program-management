@@ -1,0 +1,20 @@
+input[type="submit"]{
+    border:0;
+    background: #ddd;
+    cursor:pointer;
+}
+input[type="submit"]:link {
+    color: #000;
+}
+
+input[type="submit"]:visited {
+    color: #000;
+}
+
+input[type="submit"]:hover {
+    color: #673ab7;
+}
+
+input[type="submit"]:active {
+    color: #4527a0;
+}

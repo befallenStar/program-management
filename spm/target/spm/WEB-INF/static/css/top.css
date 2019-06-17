@@ -1,0 +1,61 @@
+.top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+}
+
+.pic {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 424px;
+    height: 80px;
+}
+
+.class-name {
+    position: absolute;
+    top: 0;
+    left: 450px;
+    right:0;
+    height: 80px;
+    line-height: 80px;
+}
+
+.profile {
+    position:absolute;
+    right: 0;
+    width: 210px;
+    height: 30px;
+    cursor:pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon {
+    right:120px;
+    background: #b39ddb;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    border-radius: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.icon i{
+    position:absolute;
+    top:34px;
+    left:8px;
+}
+
+.user-name {
+    right: 0;
+    width: 120px;
+    height: 30px;
+    line-height:30px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}

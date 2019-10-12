@@ -11,27 +11,21 @@
       </list>
     </option>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="ThinkPad" />
+  </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
         <expanded-state>
           <State />
-        </expanded-state>
-        <selected-state>
           <State>
-            <id>Plugin DevKit</id>
+            <id>Maven</id>
           </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-    <entry key="Project Default copy">
-      <profile-state>
-        <expanded-state>
-          <State />
         </expanded-state>
         <selected-state>
           <State>
-            <id>Android</id>
+            <id>Maven</id>
           </State>
         </selected-state>
       </profile-state>
